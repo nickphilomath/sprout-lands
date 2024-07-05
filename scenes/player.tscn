@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://das0qlp6yxvoi"]
+[gd_scene load_steps=18 format=3 uid="uid://das0qlp6yxvoi"]
 
 [ext_resource type="Texture2D" uid="uid://cikbl5toj4eco" path="res://assets/Characters/Basic Charakter Spritesheet.png" id="1_kiw71"]
-[ext_resource type="Script" path="res://player.gd" id="1_lx2x2"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_lx2x2"]
+[ext_resource type="FontFile" uid="uid://bgj76egm4px02" path="res://fonts/Xolonium-Regular.ttf" id="3_11agw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxmr2"]
 atlas = ExtResource("1_kiw71")
@@ -127,11 +128,22 @@ size = Vector2(10, 7)
 script = ExtResource("1_lx2x2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(38, 34)
 sprite_frames = SubResource("SpriteFrames_lk8v4")
 animation = &"walk_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(38, 39.5)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_w7teq")
+
+[node name="Name" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_top = -30.0
+offset_right = 27.0
+offset_bottom = -7.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_11agw")
+text = "Player"

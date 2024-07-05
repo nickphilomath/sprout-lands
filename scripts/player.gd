@@ -5,7 +5,7 @@ var look_direction = "down"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$AnimatedSprite2D.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,7 +50,6 @@ func _process(delta):
 			$AnimatedSprite2D.flip_h = false
 	
 	#$AnimatedSprite2D.animation = "idle_front"
-	$AnimatedSprite2D.play()
 		
 		
 	position += velocity * delta
